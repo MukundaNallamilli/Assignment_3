@@ -1,0 +1,121 @@
+\documentclass[journal,12pt,twocolumn]{article}
+\usepackage[top = 1in,bottom = 1in,left = 1in,right = 1in]{geometry}
+\setlength{\columnsep}{2cm}
+\usepackage{amssymb}
+\usepackage{amsfonts}
+\usepackage{amsmath}
+\usepackage{amsthm}
+\usepackage{setspace}
+\usepackage{longtable}
+\usepackage{enumitem}
+\usepackage{mathtools}
+\usepackage{color}                                  
+\usepackage{array}
+\usepackage{calc} 
+\usepackage{bm}
+\usepackage{caption}
+\usepackage{float}
+%has mini page
+%to fix position (H)
+
+\setlength{\parindent}{0pt}
+%no indentation for paragraphs
+
+\newcommand{\bgunion}[3]{\bigcup_{#1}^{#2}#3}
+\newcommand{\bginter}[3]{\bigcap_{#1}^{#2}#3}
+\newcommand{\probunion}{P\left( \bgunion{i=1}{2}{(X=i)} \right)}
+\newcommand{\probinter}{P\left( \bginter{i=1}{2}{(X=i)} \right)}
+
+\begin{document}
+
+\title{ASSIGNMENT-3}
+\author{MUKUNDA REDDY AI21BTECH11021}
+\date{}
+\maketitle
+\section*{Exercise 16.3}
+\textbf{17)} A and B are events such that ${P(A) = 0.42}$,
+${P(B) = 0.48}$ and ${\text{P(A and B)} = 0.16}$. Determine\\
+(i)   P(not A)\\
+(ii)  P(not B) \\
+(iii) P(A or B) \\   
+\hline
+\section*{Solution}
+There are two discrete groups A,B.let
+Y be discrete random variable such that
+\[ 
+    Y = 
+\begin{cases}
+    1, & \text{if A is chosen  } \\
+    2, & \text{if B is chosen  }
+\end{cases} 
+\]
+\subsection*{(i) Determine p(not A)}
+Given $P(A) = 0.42$ so we have
+${P(X=1) = 0.42}$
+\begin{align*}
+    P(A^\complement) &= 1 - P(X=1)\\ 
+                    &= 1 - 0.42\\   
+                    &= 0.58 
+\end{align*}
+\begin{equation}
+ \therefore P(not\ A) = 0.58    
+\end{equation}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figure_1.png}
+    \caption{P(not A)}
+    \label{fig:1}
+\end{figure}
+
+
+\subsection*{(ii) Determine p(not B)}
+Given $P(B) = 0.48$ so we have
+${P(X=2) = 0.48}$
+\begin{align*}
+    P(B^\complement) &= 1 - P(X=2)\\ 
+                    &= 1 - 0.48\\   
+                    &= 0.52
+\end{align*}
+\begin{equation}
+ \therefore P(not\ B) = 0.52   
+\end{equation}
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figure_2.png}
+    \caption{P(not B)}
+    \label{fig:2}
+\end{figure}
+
+\subsection*{(iii) Determine p(A or B)}
+Given ${P(A \cap\ B) = 0.16}$ , ${P(A) = 0.42}$ 
+${P(B) =0.48}$ so we have\\
+
+${\probinter =0.16}$
+
+\begin{align*}
+    \probunion &=P(X=1) + P(X=2)\\ 
+               & - \probinter \\   
+                &= 0.42 + 0.48 - 0.16 \\  
+                &= 0.74 
+\end{align*}
+\begin{equation}
+    \therefore P(A\ or \ B) = 0.74 
+\end{equation}
+
+\begin{figure}
+    \textbf{\textit{Verification}} \\
+    \centering
+    \includegraphics[scale=1]{Figure_4.png}
+    \caption*{python code}
+    \label{fig_code}
+\end{figure}
+
+\begin{figure}[H]
+    \centering
+    \includegraphics[scale=0.5]{Figure_3.png}
+    \caption{$P(A \cup\ B)$}
+    \label{fig:3}
+\end{figure}
+
+\end{document}
